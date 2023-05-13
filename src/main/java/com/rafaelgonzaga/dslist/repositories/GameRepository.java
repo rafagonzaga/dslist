@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.rafaelgonzaga.dslist.entities.Game;
 import com.rafaelgonzaga.dslist.projections.GameMinProjection;
 
-public interface GameRepository extends JpaRepository<Game, Long>{
+public interface GameRepository extends JpaRepository<Game, Long> {
 
 	@Query(nativeQuery = true, value = """
 			SELECT tb_game.id, tb_game.title, tb_game.game_year AS gameYear, tb_game.img_url AS imgUrl,

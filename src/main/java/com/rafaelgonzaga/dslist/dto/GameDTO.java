@@ -5,7 +5,7 @@ import org.springframework.beans.BeanUtils;
 import com.rafaelgonzaga.dslist.entities.Game;
 
 public class GameDTO {
-	
+
 	private Long id;
 	private String title;
 	private Integer year;
@@ -15,13 +15,14 @@ public class GameDTO {
 	private String imgUrl;
 	private String shortDescription;
 	private String longDescription;
-	
+
 	public GameDTO() {
 		super();
 	}
-	
+
 	public GameDTO(Game entity) {
-		// Utilizado para copiar objetos grandes que tenham os mesmos nomes dos atributos
+		// Utilizado para copiar objetos grandes que tenham os mesmos nomes dos
+		// atributos
 		// Nesse caso vai precisar ter os setters
 		BeanUtils.copyProperties(entity, this);
 	}
@@ -97,7 +98,5 @@ public class GameDTO {
 	public void setLongDescription(String longDescription) {
 		this.longDescription = longDescription;
 	}
-	
-	
 
 }
